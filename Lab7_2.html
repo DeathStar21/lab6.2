@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function cal(){
+            console.log("start");
+            let n1 = parseFloat(document.getElementById("num1").value)
+            let n2 = parseFloat(document.getElementById("num2").value)
+            let s = document.getElementById("symbol").value;
+    
+            console.log(s)
+            if(s=='+')
+            {
+                document.getElementById("ans").value=n1+n2;
+            }
+            else if(s=='-')
+            {
+                document.getElementById("ans").value=n1-n2;
+            }
+            else if(s=='*')
+            {
+                document.getElementById("ans").value=n1*n2;
+            }
+            else if(s=='/')
+            {
+                document.getElementById("ans").value=n1/n2;
+            }
+            console.log(n1)
+            console.log(n2)
+            console.log(ans)
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="num1" size="5">
+    <select name="symbol" id="symbol">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*" selected>*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="num2" size="5">
+    <label>=</label>
+    <input type="text" id="ans" size="5">
+    <input type="button" value="Compute" onclick="cal()">
+</body>
+</html>
